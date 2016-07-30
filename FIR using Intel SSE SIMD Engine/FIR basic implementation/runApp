@@ -1,0 +1,4 @@
+rm -f fir_scalar.o a.out
+gcc -fno-tree-vectorize -c fir_scalar.c -o fir_scalar.o
+gcc -msse3 -O2 fir_vector.c fir_scalar.o
+./a.out
