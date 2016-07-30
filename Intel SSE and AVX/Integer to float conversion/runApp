@@ -1,0 +1,4 @@
+rm -f convert_naive.o a.out
+gcc -g -ftree-vectorize -c convert_naive.c -o convert_naive.o
+gcc -g -msse3 -DSSE -O2 convert_sud.c convert_naive.o
+./a.out
